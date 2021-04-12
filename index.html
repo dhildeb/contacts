@@ -17,8 +17,7 @@
       <i class="fa fa-fw fa-address-book"></i>
       <span>My Contact List</span>
     </h1>
-    <!-- TODO show the new-contact-form when this button is clicked -->
-    <button class="fab" title="New Contact">
+    <button class="fab" title="New Contact" onclick="showContactForm()">
       <i class="fa fa-lg fa-plus-circle"></i>
     </button>
     </div>
@@ -26,7 +25,6 @@
   </header>
 
   <main class="container">
-    <!-- TODO Finish this form you need two more input fields one is type="checkbox" -->
     <form class="card mt-1 mb-1" id="new-contact-form" class="" onsubmit="addContact(event)">
       <div>
         <h4 class="mt-1 mb-1">
@@ -35,41 +33,27 @@
         </h4>
       </div>
       <div>
-        <label for="name">Name:</label>
-        <input type="text" name="name">
+        <label for="contact-name">Name:</label>
+        <input type="text" name="contactName">
+      </div>
+      <div>
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone">
+      </div>
+      <div>
+        <label for="Emergency">Emergency Contact:</label>
+        <input id="checkbox" type="checkbox">
       </div>
       <hr>
       <div class="d-flex space-between">
         <button type="submit">Submit</button>
-        <!-- TODO hide this form when this button is clicked -->
-        <button class="btn-cancel" type="button" >cancel</button>
+        <button class="btn-cancel" type="button" onclick="hideContactForm()">cancel</button>
       </div>
     </form>
 
     <div class="contacts" id="contact-list">
-      <!-- TODO Remove these templates and draw them using JavaScript -->
-      <div class="card mt-1 mb-1">
-        <h3 class="mt-1 mb-1">Jimmy Tester</h3>
-        <div class="d-flex space-between">
-          <p>
-            <i class="fa fa-fw fa-phone"></i>
-            <span>(777) 777-7777</span>
-          </p>
-          <i class="action fa fa-trash text-danger"></i>
-        </div>
       </div>
-      <div class="card mt-1 mb-1 emergency-contact">
-        <h3 class="mt-1 mb-1">Emergency Contact Tester</h3>
-        <div class="d-flex space-between">
-          <p>
-            <i class="fa fa-fw fa-phone"></i>
-            <span>(777) 777-7777</span>
-          </p>
-          <i class="action fa fa-trash text-danger"></i>
-        </div>
-      </div>
-    </div>
-  </main>
+    </main>
 
   <script src="main.js"></script>
 </body>
